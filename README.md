@@ -1,2 +1,0 @@
-# MySalesforceProject
-My Salesforce Project
