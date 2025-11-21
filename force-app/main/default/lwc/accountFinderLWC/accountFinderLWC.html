@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="My Project LWC">
+    <template if:true={accounts.data}>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Industry</th>
+            </tr>
+
+            <template for:each={accounts.data} for:item="acc">
+                <tr key={acc.id}>
+                    <td>{acc.Name}</td>
+                    <td>{acc.Industry}</td>
+                    <td>{acc.Phone}</td>
+                </tr>
+            </template>
+        </table>
+    </template>
+
+    <template if:true={accounts.error}>
+        <p>Error loading accounts.</p>
+    </template>
+    </lightning-card>
+</template>
